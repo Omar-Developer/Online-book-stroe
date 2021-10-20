@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="main-page.css">
+  <link rel="stylesheet" href="filter_css.css">  
+  <link rel="stylesheet" href="JS.js">
+  <link rel="stylesheet" href="JS_File.js">
+  <title>Document</title>
+</head>
+<body>
+  <script src="jquery-3.6.0.js"  type="text/javascript"></script>
+  <script src="vue.js"></script>
+
+  <div class="landing-page-9">
+
+    <div class="overlay-9">
+      
+       <div class="book-view">
+        <span  class="close-book-view" title="Close Modal">&times;</span>
+
+          <div class="the-book">
+            <div class="cover-of-book">
+                 <img src="" alt="">
+            </div>    
+<p>I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.</p>
+          </div>
+
+          <div class="info-of-book">
+
+          <h1>I'm a product</h1>
+         <div class="the-price" style="display: flex;">
+          <h2>$</h2>
+          <h2 class="price-num">0</h2>
+        </div> 
+          <p>Quantity</p>
+              
+          <input class="q_num" type="number" min="0" max="99"  value="1"  style="height: 30px;margin-bottom: 20px; border: 2px solid brown;">
+            <button class="to_card">Add to Crad</button>
+            <button style="margin-top: 15px;">Buy Now</button>
+       
+            
+<!-- ******************* Product info -->
+<div class="contener-pro-info">
+
+  <div class="dropdown">
+    <div  class="dropbtn-3"><span class="co">PRODUCT INFO</span>  <span class="sign" style="margin-left: 360px;">+</span> </div>
+    <div id="myDropdown-3" class="dropdown-content-3">
+
+<p style="line-height: 30px;">I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.</p>
+
+    </div>
+  </div><hr> </div>
+
+<!-- ***************** end of product info -->
+       
+<!-- ******************* Return & Refund policy -->
+<div class="contener-Return">
+
+  <div class="dropdown">
+    <div  class="dropbtn-4"><span class="co">RETURN & REFUND POLICY</span>  <span class="sign" style="margin-left: 360px;">+</span> </div>
+    <div id="myDropdown-4" class="dropdown-content-3">
+
+<p style="line-height: 30px;">I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.</p>
+
+    </div>
+  </div><hr> </div>
+
+<!-- ***************** end Return & Refund policy -->
+
+
+
+<!-- ******************* Shipping info -->
+<div class="contener-Shipping">
+
+  <div class="dropdown">
+    <div  class="dropbtn-5"><span class="co">SHIPPING INFO</span>  <span class="sign" style="margin-left: 360px;">+</span> </div>
+    <div id="myDropdown-5" class="dropdown-content-3">
+
+<p style="line-height: 30px;">I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.</p>
+
+    </div>
+  </div><hr> </div>
+
+<!-- ***************** end Shipping info -->
+
+
+</div>
+       
+       
+        </div>
+
+
+       
+
+<script>
+
+
+
+
+$(function(){
+
+  var selected = localStorage.getItem('which_page');  
+ 
+
+  
+  
+ 
+
+    var p_info=false;    
+    var ret=false;
+    var shi=false;
+
+    $(".dropbtn-3").click(function(){
+      if(p_info==false){
+        
+        $(".contener-Shipping .sign").text("+");
+        shi=false;
+        
+      
+        $(".contener-Return .sign").text("+");
+        ret=false;
+        
+        $(".contener-pro-info .sign").text("-");
+        p_info=true;
+      }
+      else{
+        $(".contener-pro-info .sign").text("+");
+        p_info=false;
+      }
+      $("#myDropdown-4").hide(100);
+      $("#myDropdown-5").hide(100);
+      $("#myDropdown-3").toggle(400);
+   });
+
+    $(".dropbtn-4").click(function(){
+      if(ret==false){
+      
+        $(".contener-pro-info .sign").text("+");
+        p_info=false;
+
+        $(".contener-Shipping .sign").text("+");
+        shi=false;
+        
+      
+        $(".contener-Return .sign").text("-");
+        ret=true;
+      
+      
+      }
+      else{
+        
+        $(".contener-Return .sign").text("+");
+        ret=false;
+      
+      }
+      $("#myDropdown-3").hide(100);
+      $("#myDropdown-5").hide(100);
+       $("#myDropdown-4").toggle(400);
+    });
+
+    $(".dropbtn-5").click(function(){
+      if(shi==false){
+      
+        $(".contener-Return .sign").text("+");
+        ret=false;
+     
+        $(".contener-pro-info .sign").text("+");
+        p_info=false;
+      
+        $(".contener-Shipping .sign").text("-");
+        shi=true;
+      
+      }
+      else{
+        
+        $(".contener-Shipping .sign").text("+");
+        shi=false;
+      }
+
+      $(".contener-pro-info .sign").text("+");
+        p_info=false;
+      $(".contener-Return .sign").text("+");
+        ret=false;
+      $("#myDropdown-3").hide(100);
+      $("#myDropdown-4").hide(100);
+      $("#myDropdown-5").toggle(400);
+     
+   });
+
+
+   $(".landing-page-9 .close-book-view").click(function(){
+
+setTimeout(function () {
+  
+  $(".bring-our-story").hide(500);
+  $(".bring-contact").hide(500);
+ 
+  $(".bring-book-view").hide(500);
+ 
+
+if(selected=='main_page'){
+  
+$(".bring-fillter").hide(500);
+$(".show-hide-main-page").show(500);    
+  $('html, body').animate({
+         scrollTop: $(localStorage.getItem('to_page')).offset().top
+     }, 1500);
+
+    }
+    else{
+      
+      $(".show-hide-main-page").hide(500);    
+      $(".bring-fillter").show(500);
+      $('html, body').animate({
+         scrollTop: $(".header").offset().top
+     }, 1500);
+
+
+
+    }
+
+    localStorage.removeItem('which_page');
+
+
+  }, 500);
+
+});
+
+
+  });
+
+</script>
+
+
+
+
+       
+  </div>
+  
+  </div>
+
+
+</body>
+</html>

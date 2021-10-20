@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main-page.css">
+   <link rel="stylesheet" href="JS_File.js">
+       
+    <link rel="stylesheet" href="filter_css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   <title>Document</title>
+</head>
+<body>
+
+
+  <script src="jquery-3.6.0.js" type="text/javascript"></script>
+
+  <div class="card-page" style="display: none;">
+    <div class="add-to-card">
+
+      <div class="title">
+      
+        <div class="text-contener">
+          
+          <i class="arrow back-btn"></i> 
+          <h2>Cart</h2>
+        </div>
+       
+      
+      </div>
+      
+      
+      <!-- ============================ -->
+      <div class="your-cart" style=" overflow-y: auto; overflow-x: hidden;">
+      
+      </div>
+      
+      <!-- ============================ -->
+      
+      
+      
+      
+      
+      <div class="contener-view-cart">
+      
+        <div class="total">
+          <h1>Subtotal</h1>
+          <h1>$<span>0</span></h1>
+        </div>
+        
+      <hr>
+      <button class="view-btn">Buy Now</button>
+      
+      </div>
+      
+      
+      
+      
+      </div>
+  
+  </div>
+  <div class="shdow-page" style="display: none;"><div class="landing-page-card">
+
+  </div></div>
+  
+<!-- Sign Up Page -->
+<div class="regset">
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content" action="/action_page.php">
+      <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+  
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        
+        <a href="#" style="color:dodgerblue;text-decoration: none;">Don't have an account yet?</a>      
+  
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+  
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+<!-- ---------------------- -->
+
+
+
+<!-- the header -->
+<div class="header">
+  <div class="rectangle">
+   <div class="text">
+     <h1>Store</h1>
+   </div>
+    <div class="sub-rectangle"> Book </div>
+          
+  </div>
+  
+  <ul>
+    <li><a href="#" class="book-store-page">Bookstore</a></li>
+    <li><a href="#" class="events">Events</a></li>
+    <li><a href="#" class="about-page">About</a> </li>
+    <li><a href="#" class="contact-page">Contact</a> </li>
+    <li> <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class='fa fa-user-circle' style='font-size:22px;color: brown;'></i> Log In</a> </li>
+     <li><a href="#" class="card"><i class='fa fa-shopping-cart' style='font-size:24px; color: brown;'></i></a> 
+      </li>
+    </ul>
+  </div>
+
+
+<!-- end of header -->
+
+
+<div class="show-hide-main-page">
+<div class="landing-page">
+ 
+  <div class="overlay">
+     <div class="image-of-landing-page">
+      <div class="text">
+      <h1>ONLINE BOOK STROE</h1>
+      <h1>THE RIGHT PLACE </h1>
+      <h1>FOR YOUR KNOWLEDGE !</h1>
+     
+      
+    </div>
+      
+    <img src="./logo_book.jpeg" alt="" class="logo">
+<img src="./the_books.jpeg" alt="" class="books">
+
+     </div>
+     
+  </div>
+ </div>
+
+
+
+
+
+<div class="landing-page-2">
+
+  <div class="overlay-2">
+    <h1>BEST SELLERS </h1>
+     
+</div>
+
+</div>
+
+<div class="sub-landing-page-2">
+
+  <div class="sub-overlay-2">
+    
+<div class="whole-list-area">  <i id="left-1" class="arrow left"></i>  
+
+    <div class="list-area">
+ 
+  
+     
+<div class="listOf-books"></div> 
+
+
+</div>  
+
+<i id="right-1" class="arrow right"></i> 
+
+</div>
+<!-- ----------------- -->
+</div>
+
+</div>
+
+
+
+<!-- page 3 Recommended Books -->
+
+<div class="landing-page-3">
+
+  <div class="overlay-3">
+      
+    <div class="text"> 
+       <hr>
+      <h1>RECOMMENDED BOOKS</h1>
+       <hr>
+    </div>
+    
+
+<!-- ------------- -->
+<div class="whole-list-area">  <i id="left-2" class="arrow left"></i>  
+
+  <div class="list-area">
+
+
+   
+<div class="listOf-books"></div> 
+
+
+</div>  
+
+<i id="right-2" class="arrow right"></i> 
+
+</div>
+<!-- ----------------- -->
+</div>
+
+</div>
+
+<!-- ------------------ -->
+   
+
+
+
+<!-- ---------------------- -->
+
+
+<!-- page 4 -->
+
+<div class="landing-page-4">
+  
+  <div class="overlay-4">
+   
+     <div class="text">
+       <hr class="hr-1">
+      <h1>THERE'S NO</h1>
+        <h1>SUCH THING AS TOO</h1>
+        <h1>MANY BOOKS</h1>
+
+        <button class="button-OurStory button1">Read Our Story</button>
+        
+        <hr class="hr-2">
+      </div>
+
+</div>
+
+</div>
+
+
+<!-- --------------------- -->
+
+<!-- page 5 up coming books lanuch -->
+<div class="landing-page-5">
+
+  <div class="overlay-5">
+    <div class="text">
+      <h3>Coming Up</h3>
+        <h1>BOOK LAUNCH</h1>
+      </div>
+    
+      <div class="book-lanuch">
+          
+        <div class="book">
+        <img src="./books/up_coming/book_up_com.jpeg" >
+          
+        </div>
+      
+        <div class="info-book">
+          <h2>Introducing The Land of AILOO</h2>
+          <P>By Mark Walker</P>
+          <br>
+          <h3>When</h3>
+           <hr>
+           <p>Jul 12, 2023, 7:00 PM</p>
+           <br>
+           <h3>Where</h3>
+           <hr>
+           <p>500 Terry A Francois Blvd, </p>
+           <p>500 Terry A Francois Blvd, San Francisco, CA 94158, USA</p>
+
+           <button class="button-RSVP button1">RSVP NOW</button>
+
+          </div>
+          
+
+      </div>
+
+</div>
+
+</div>
+<!-- ------------------ -->
+</div>
+
+
+
+<div class="bring-our-story" style="display: none;"></div>
+<div class="bring-contact" style="display: none;"></div>
+<div class="bring-fillter" style="display: none;"></div>
+
+<div class="contener-book-view-page">
+  <div class="bring-book-view" style="display: none;" ></div>
+</div>
+
+
+<!-- end of show / hide main page -->
+  
+<script>
+// show  / hide pages
+
+$(function(){
+
+  $(".bring-our-story").load("our_story.html .landing-page-7"); 
+  $(".bring-contact").load("contact.html .landing-page-10"); 
+  $(".bring-fillter").load("fillter.html"); 
+  $(".bring-book-view").load("book_view.html"); 
+  
+
+$(".rectangle .text").click(function(){
+  setTimeout(function () {
+    
+   
+$(".bring-our-story").hide(500);
+$(".bring-contact").hide(500);
+$(".bring-fillter").hide(500);
+$(".bring-book-view").hide(500);
+$(".show-hide-main-page").show(500);
+}, 500);
+
+
+localStorage.removeItem('which_page');
+
+});
+
+
+  $(".about-page").click(function(){
+
+    setTimeout(function () {
+$(".show-hide-main-page").hide(500);
+$(".bring-contact").hide(500);
+$(".bring-fillter").hide(500);
+$(".bring-book-view").hide(500);
+$(".bring-our-story").show(500);
+}, 500);
+
+
+
+});
+
+
+$(".button-OurStory").click(function(){
+
+setTimeout(function () {
+$(".show-hide-main-page").hide(500);
+$(".bring-contact").hide(500);
+$(".bring-fillter").hide(500);
+$(".bring-book-view").hide(500);
+$(".bring-our-story").show(500);
+
+$('html, body').animate({
+         scrollTop: $(".header").offset().top
+     }, 1500);
+
+}, 500);
+
+
+});
+
+$(".events").click(function() {
+     $('html, body').animate({
+         scrollTop: $(".landing-page-5").offset().top
+     }, 1500);
+ });
+
+
+  $(".contact-page").click(function(){
+
+    setTimeout(function () {
+
+$(".show-hide-main-page").hide(500);
+$(".bring-fillter").hide(500);    
+$(".bring-our-story").hide(500);
+$(".bring-book-view").hide(500);
+$(".bring-contact").show(500);
+  }, 500);
+
+    
+  });
+
+  
+  $(".book-store-page").click(function(){
+ 
+    
+
+    setTimeout(function () {
+$(".show-hide-main-page").hide(500);
+    $(".bring-our-story").hide(500);
+    $(".bring-contact").hide(500);
+ 
+ 
+    $(".bring-book-view").hide(500);
+    
+    $(".bring-fillter").show(500); 
+  }, 500);
+  
+  
+  localStorage.removeItem('which_page');
+ 
+  
+});
+
+
+
+  
+
+
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+
+<!-- page 6 references -->
+
+<div class="landing-page-6">
+
+  <div class="overlay-6">
+
+    <div class="ref">
+<div class="shop">
+  
+  <ul>
+    <h3>Shop</h3>
+    <li><a href="#">FAQ</a></li>
+    <li><a href="#">Shipping & Returns</a></li>
+    <li><a href="#">Store Policy</a></li>
+    <li><a href="#">Payment Methods</a></li>
+  </ul>
+</div>
+
+
+<div class="Socials">
+ 
+  <ul>
+    <h3>Socials</h3>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Pinterest</a></li>
+  </ul>
+</div>
+
+
+   <div class="sign-up">
+<h3>Be The First To Know</h3>
+
+
+<h4>Sign up for our newsletter</h4>
+
+<button class="button button1">Enter your email here*</button>
+<br>
+<button class="button button2">Subscribe</button>
+
+</div>
+
+    </div>
+
+
+
+  </div>
+    </div>
+<!-- ------------------- -->
+
+<!-- page 7 about us -->
+
+<!-- ------------------- -->
+
+<script>
+
+  $(function(){
+    
+   
+
+    var css_quick_view={
+  
+    "height":"60px",
+    "width":"180px",
+     "background-color":"#ffffff99",
+     "color":"black",
+     "position":"absolute" ,
+      "bottom":"-60px" ,
+      "z-index": "-3",
+      "transition": "0.4s",
+      
+}
+var css_products={
+"z-index":"5",
+"height":"300px",
+"width":"180px",
+"background-color":"brown",
+"color":"white",
+"margin-left":"30px",
+"cursor": "pointer"  
+}
+var css_btn={
+            "position":"absolute",
+            "border":"none",
+            "color":"white",
+            "width": "100%",
+            "padding":"10px 32px",
+            "text-align":"center",
+            "text-decoration":"none",
+            "display":"none",
+            "font-size":"16px",
+            "transition-duration":"0.4s",
+            "cursor":"pointer",
+            "background-color": "brown",
+              "color": "white",
+              "border": "2px solid cornsilk"
+}
+
+
+
+var path_rec="./books/recommended/";
+var path_best="./books/best-sellers/";
+
+var str="book-";
+
+var RecomnededBooks= [ ["book" ,"20",path_rec+str+1], ["book" ,"25",path_rec+str+2], ["book" ,"25",path_rec+str+3], ["book" ,"30",path_rec+str+4], ["book" ,"40",path_rec+str+5],["book" ,"40",path_rec+str+6],["book" ,"50",path_rec+str+7], ["book" ,"55",path_rec+str+8]];
+   var best = [ ["book" ,"20",path_best+str+1], ["book" ,"25",path_best+str+2], ["book" ,"25",path_best+str+3], ["book" ,"30",path_best+str+4], ["book" ,"40",path_best+str+5],["book" ,"40",path_best+str+6],["book" ,"50",path_best+str+7], ["book" ,"55",path_best+str+8]];
+var arr_btn_states=[];
+ var the_total=0;
+     
+   var listOfBest=".sub-landing-page-2 .listOf-books";
+   var listOfRec=".landing-page-3 .listOf-books";
+   Create_products(best,0,listOfBest,1,best.length);
+   Create_products(RecomnededBooks,best.length,listOfRec,2,RecomnededBooks.length);
+  // Create products
+
+  
+
+ 
+
+  function Create_products(books,num,bookType,j,length){
+
+  var arr =books;
+  var listOfBooks=bookType;
+  var BookNum=num;
+  jQuery.each(arr,function(i,val){
+
+    //create products
+ var p="<div class='product-"+(i+BookNum+1)+"'";
+ var qv="<div class='quick-view-"+(i+BookNum+1)+"'><p>Quick View</p></div></div>";
+ var btn="<p>I'm a product</p><p>$"+arr[i][1]+"</p></div><button class='button-"+(i+BookNum+1)+" button1'>Add to Cart</button></div></div></div>";
+ var res=p+"><div class='background-product'><!-- image of book     --><img src='"+arr[i][2]+".jpeg' >"+ qv+"<div class='contener'><div class='product-name-and-price'>"+btn;
+  
+
+
+  $(listOfBooks).append(res);
+//set proprtyes to products
+
+  $(".product-"+(i+BookNum+1) ).css(css_products);
+  $(".quick-view-"+(i+BookNum+1)).css(css_quick_view);
+  $(".button-"+(i+BookNum+1)).css(css_btn);
+
+  
+$(".button-"+(i+BookNum+1)).hover(function() {
+            $(this).css("background-color","#f44336");
+          }).mouseout(function(){
+              $(this).css({ "background-color": "brown"
+
+              });
+          });
+  
+
+  $(".product-"+(i+BookNum+1) ).mouseenter(function(){
+$(".quick-view-"+(i+BookNum+1)).css({"bottom":"0","z-index":"3"});
+$(".button-"+(i+BookNum+1)).css({"display":"block"});
+}).mouseleave(function(){
+$(".quick-view-"+(i+BookNum+1)).css({"bottom":"-60px","z-index":"-3","transition": ".-5s"});
+$(".button-"+(i+BookNum+1)).css("display","none");
+});
+
+
+var p_click=listOfBooks+" .product-"+(i+BookNum+1);
+var btn_state=false;
+  arr_btn_states.push(btn_state);
+
+$(".button-"+(i+BookNum+1)).click(function(){
+  
+  if(arr_btn_states[i]==false) {
+  btn_state=true;
+  arr_btn_states[i]=btn_state;
+////-------------------
+
+var cart='<div id="pro-cart-'+i+'" class="product-cart">'
+      +
+      '<div class="im" style=" height: 120px; width: fit-content;background-color: #f5ebc5;">'
+        +
+        '<img src='+ arr[i][2]+'.jpeg alt="" style="padding: 10px; height: 100px;width: 70px;" >'
+    +
+     '   </div>'
+    +
+      
+     ' <div class="pro-info"> ' +'<p>I'+"'"+'m a product</p>'
+      +  
+     
+      '<h4>$<span class="p-'+i+'">'+arr[i][1] +'</span></h4>'
+        + 
+        '<div style="display:flex;font-size: 25px;"> <div class="minus-'+i+'" style="position: absolute;left: 100px;margin-top: 14px;">-</div> '
+        + 
+        '<input type="number"class="number-'+i+'"' +' min="1" max="99"  value="1" style="height: 30px; width: 40px;margin-left: 10px; border: 2px solid brown;"readonly>'
+        +
+        '<div class="plus-'+i+'" style="position: absolute;left: 167px;margin-top: 16px;">+</div></div>'
+        +'</div>'
+      
+      +
+      '<div id="colse-circle-'+i+'" class="circle-" style="height: 20px;width: 20px;text-align: center; background-color: white;border-radius: 50%;border: .5px solid brown; margin-left: 60px;margin-top: 5px; ">'
+       +
+        '<span class="close" id="close-'+i+'" style="font-size: 19px; color: brown;">&times;</span>'
+      +
+       ' </div> </div>';
+       $(".button-"+(i+BookNum+1)).text("Addedd");
+       $(".button-"+(i+BookNum+1)).css({"display":"block"
+, "background-color":"#f5ebc5" , "color":"brown",
+});
+       added_btns();
+      
+
+$(".your-cart").append(cart);
+//-------------------
+the_total+=parseInt(arr[i][1]);
+$(".contener-view-cart .total span").text(the_total);
+
+$(".minus-"+i).hover(function(){
+$(this).css({ "cursor": "pointer" , "color":"red"});
+}, function(){
+  $(this).css({"color":"brown"});
+
+});
+
+$(".plus-"+i).hover(function(){
+$(this).css({ "cursor": "pointer" , "color":"red"});
+}, function(){
+  $(this).css({"color":"brown"});
+
+});
+var num_of_quntity=1;
+  $(".minus-"+i).click(function () {
+
+    if (num_of_quntity-1 > 0 && num_of_quntity-1 < 99){
+  var v_p= arr[i][1];
+
+  num_of_quntity--;
+  $(".number-"+i).val((num_of_quntity));
+  
+  
+  $(".p-"+i).text(v_p*num_of_quntity);
+ 
+  the_total-=parseInt(v_p);
+  
+  $(".contener-view-cart .total span").text(the_total);
+  }
+});
+
+$(".plus-"+i).click(function () {
+  if (num_of_quntity+1 > 0 && num_of_quntity+1 < 99){
+   var v_p= arr[i][1];
+   num_of_quntity++;
+  
+    $(".number-"+i).val(num_of_quntity);
+  
+
+$(".p-"+i).text(v_p*num_of_quntity);
+
+the_total+=parseInt(v_p);
+
+$(".contener-view-cart .total span").text(the_total);
+}
+});
+
+
+$("#colse-circle-"+i).hover(function(){
+
+  $("#close-"+i).css({"color":"white"});
+$(this).css({"opacity": "1" ,"background-color": "red","border": ".5px solid red"
+,
+"cursor": "pointer"
+});
+
+
+
+}, function(){
+  $("#close-"+i).css("color", "brown");
+  $(this).css({"background-color": "white","border": ".5px solid brown"});
+
+});
+  
+
+$("#colse-circle-"+i).click(function(){
+$("#pro-cart-"+i).remove();
+the_total-=parseInt(arr[i][1])*num_of_quntity;
+$(".contener-view-cart .total span").text(the_total);
+arr_btn_states[i]=false;
+
+          
+$(".product-"+(i+BookNum+1) ).mouseenter(function(){
+
+  $(".button-"+(i+BookNum+1)).css({"background-color":"brown" ,"color":"white"});
+  $(".button-"+(i+BookNum+1)).text("Add to Cart");
+//#f44336
+}).mouseleave(function(){
+  $(".button-"+(i+BookNum+1)).css({ "background-color": "brown"
+});     
+});
+
+$(".button-"+(i+BookNum+1)).mouseenter(function(){
+
+$(".button-"+(i+BookNum+1)).css({"background-color":"#f44336" ,"color":"white"});
+$(".button-"+(i+BookNum+1)).text("Add to Cart");
+//#f44336
+}).mouseleave(function(){
+$(".button-"+(i+BookNum+1)).css({ "background-color": "brown"
+});     
+});
+
+
+});
+
+
+  }
+
+else{
+
+//for btns
+added_btns();
+ 
+
+}
+
+function added_btns(){
+  $(".product-"+(i+BookNum+1) ).mouseenter(function(){
+$(".quick-view-"+(i+BookNum+1)).css({"bottom":"0","z-index":"3"});
+$(".button-"+(i+BookNum+1)).css({"display":"block"
+, "background-color":"#f5ebc5" , "color":"brown",
+});
+$(".button-"+(i+BookNum+1)).text("Addedd");
+
+
+}).mouseleave(function(){
+$(".quick-view-"+(i+BookNum+1)).css({"bottom":"-60px","z-index":"-3","transition": ".-5s"});
+$(".button-"+(i+BookNum+1)).css({"display":"none", "color":"white"});
+
+
+});
+
+
+  $(".button-"+(i+BookNum+1)).mouseenter(function(){
+    
+  
+  $(".button-"+(i+BookNum+1)).css({"background-color":"#f5ebc5" , "color":"brown"});
+  
+}).mouseleave(function(){
+  $(".button-"+(i+BookNum+1)).css({"background-color":"#f5ebc5" , "color":"brown"});
+
+});
+
+ }
+
+});
+
+
+
+
+$(p_click).click(function(){
+ 
+  if(btn_state==false){
+    $(".bring-book-view").remove();
+   var di='<div class="bring-book-view" style="display: none;" ></div>' 
+   $(".contener-book-view-page").html(di); 
+   $(".bring-book-view").load("book_view.html"); 
+
+   localStorage.setItem('which_page', 'main_page');
+   if(arr==best){
+   localStorage.setItem('to_page', '.landing-page-2');
+   }
+   else{
+    localStorage.setItem('to_page', '.landing-page-3');
+   }
+
+   setTimeout(function () {
+
+   
+$(".show-hide-main-page").hide(500);
+$(".bring-contact").hide(500);
+$(".bring-fillter").hide(500);
+$(".bring-our-story").hide(500);
+
+
+$(".landing-page-9 .price-num").text(arr[i][1]);
+$(".landing-page-9 img").attr("src",arr[i][2]+".jpeg");
+
+var p_num=$(".landing-page-9 .price-num").text();
+
+$(".landing-page-9 .q_num").val(1);
+$(".landing-page-9 .q_num").bind('keyup mouseup', function () {
+
+ var q_num=$(this).val();
+ var res=(q_num*p_num);
+ if (q_num > 0 && q_num < 99)
+  $(".landing-page-9 .price-num").text(res);
+
+});
+
+
+$(".bring-book-view").show(500);
+
+
+
+$('html, body').animate({
+         scrollTop: $(".header").offset().top+90
+     }, 1500);
+
+
+
+}, 500);
+
+  }
+
+});
+
+
+
+
+});
+  //End of products
+  var x=0;
+   $("#right-"+j).on("click", function () {
+    
+    
+    if( x!=0){
+x+=210;
+if($(listOfBooks).position().left<=(210*(length)) ){
+    $(listOfBooks).stop(true, true).animate({
+   
+    left:x
+  }, 500);
+
+}
+    }
+});
+$("#left-"+j).on("click", function () {
+  x-=200;
+    if(x<=(-200*length))
+    x+=200;
+  $(listOfBooks).stop(true, true).animate({
+    left:x
+    // '-=200'
+  }, 500);
+});
+
+
+
+
+ }
+
+
+
+  });
+
+
+
+  
+
+  
+</script>
+
+
+
+
+
+<script>
+
+
+$(function(){
+
+  
+
+  $(".card").click(function(){
+
+    $(".shdow-page").css({ "display":"block"});
+    $(".card-page").css({ "display":"block"});
+    setTimeout(function () {
+    $(".card-page .add-to-card").css({ "right":"0","transition": ".5s"});
+  }, 500);
+
+});
+
+
+
+$(".add-to-card .back-btn").click(function(){
+
+  $(".card-page .add-to-card").css({ "right":"-350px","transition": ".5s"});
+ 
+    setTimeout(function () {
+  
+      $(".shdow-page").css({ "display":"none"});
+    $(".card-page").css({ "display":"none"});
+
+  
+    }, 500);
+
+
+  
+});
+
+
+});
+
+</script>
+
+
+
+</body>
+</html>
